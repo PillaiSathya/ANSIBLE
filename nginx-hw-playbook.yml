@@ -1,0 +1,36 @@
+- name: Nginx homework playbook
+  hosts: test
+  become: yes
+
+  tasks:
+    - name: Ensure nginx is installed
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Ensure nginx service is running & enabled
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: to create a custom html file
+      copy:
+        dest: /var/www/html/index.html
+        mode: '0644'
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+           <title>Welcome Page Sathya</title>
+          </head>
+           <body>
+            <h1>Welcome to Sathya's Ansibl Homework</h1>
+            <p>This is a static HTML page deployed by ansible.</p>
+          </body>
+          </html>
+
+
+
+       
