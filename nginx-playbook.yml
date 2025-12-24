@@ -1,0 +1,9 @@
+- name: Install inginx on local machine
+  hosts: test              # group from inventory
+  become: yes              # use sudo
+  tasks:
+     - name: update apt cache and install inginx
+       apt:
+        name: nginx
+        state: present
+        update_cache: yes
