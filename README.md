@@ -9,6 +9,13 @@
 - Package installation using Ansible
 - Idempotency validation
 
+## Concepts Practiced
+- Idempotency in Ansible
+- Declarative configuration management
+- Difference between ad-hoc commands and playbooks
+- Service management using modules (apt, service, copy)
+- Privilege escalation using become
+
 ## Commands Used
 
 ### Ping Test
@@ -53,6 +60,18 @@ Second run: no changes detected (changed=0)
 Verification:
 curl localhost
 ![Screenshot for the o/p of ansible-playbook](playbook_output.png)
+
+# Ansible Variables & Loops
+
+📄 Playbook: nginx-vars-loop-playbook.yml
+
+What it demonstrates:
+- Using variables to define package lists
+- Installing multiple packages using loops
+- Clean, reusable playbook design
+
+Example:
+Packages like nginx, git, curl, vim, tree were installed using a loop.
 
 ## Advanced Ansible Concepts Practiced
 
@@ -107,5 +126,12 @@ roles/
 - Used variables, loops, conditionals, and templates for flexibility
 - Structured automation using roles and site.yml
 - Gained confidence in writing production-aligned Ansible code
+
+## Learning Status
+✔ Ansible Basics  
+✔ Inventory & Modules  
+✔ Playbooks & Idempotency  
+✔ Variables & Loops  
+⏳ Roles, Templates, Handlers (In Progress)
 
 💡 This repository represents my hands-on Ansible learning journey, focusing on real-world automation, best practices, and clarity.
